@@ -714,11 +714,9 @@ button {
   border-radius: 3px;
 }
 
-.term-tooltip {
-  position: absolute;
-  z-index: 30;
-  left: 0;
-  top: calc(100% + 9px);
+.term-tooltip-portal {
+  position: fixed;
+  z-index: 2000;
   display: block;
   width: max-content;
   max-width: 280px;
@@ -726,12 +724,13 @@ button {
   border: 1px solid var(--accent-dim);
   border-radius: 10px;
   padding: 11px 13px;
-  box-shadow: 0 14px 34px -12px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 14px 34px -12px rgba(0, 0, 0, 0.6);
   font-family: var(--font-body);
   white-space: normal;
+  pointer-events: auto;
 }
 
-.term-tooltip::before {
+.term-tooltip-portal::before {
   content: "";
   position: absolute;
   top: -6px;

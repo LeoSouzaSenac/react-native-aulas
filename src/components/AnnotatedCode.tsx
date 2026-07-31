@@ -16,7 +16,7 @@ export default function AnnotatedCode({ filename, lines }: AnnotatedCodeProps) {
           <span />
         </div>
         {filename && <span className="fname">{filename}</span>}
-        <span className="hint">toque nos termos marcados</span>
+        <span className="hint">passe o mouse nos termos marcados</span>
       </div>
       <pre>
         {lines.map((line, i) => (

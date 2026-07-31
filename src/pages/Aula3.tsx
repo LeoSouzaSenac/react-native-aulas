@@ -220,14 +220,23 @@ export default function Aula3({ goTo }: PageProps) {
             <AnnotatedCode
               filename="App.tsx"
               lines={[
-                ["import { ", t("SafeAreaView", "Raiz da tela, respeitando notch e barra de gestos."), ", ", t("View", "Blocos de layout."), ", ", t("StyleSheet", "Cria estilos."), " } from 'react-native'"],
+                [
+                  "import { ",
+                  t("SafeAreaProvider", "Mede as áreas seguras do aparelho — precisa envolver o app uma vez só (ver Aula 2)."),
+                  ", ",
+                  t("SafeAreaView", "Raiz da tela, respeitando notch e barra de gestos — vem do react-native-safe-area-context."),
+                  " } from 'react-native-safe-area-context'",
+                ],
+                ["import { ", t("View", "Blocos de layout."), ", ", t("StyleSheet", "Cria estilos."), " } from 'react-native'"],
                 [""],
                 ["const App = () => {"],
                 ["  return ("],
-                ["    <SafeAreaView style={styles.container}>"],
-                ["      <View style={styles.topo} />"],
-                ["      <View style={styles.conteudo} />"],
-                ["    </SafeAreaView>"],
+                ["    <SafeAreaProvider>"],
+                ["      <SafeAreaView style={styles.container}>"],
+                ["        <View style={styles.topo} />"],
+                ["        <View style={styles.conteudo} />"],
+                ["      </SafeAreaView>"],
+                ["    </SafeAreaProvider>"],
                 ["  )"],
                 ["}"],
                 [""],

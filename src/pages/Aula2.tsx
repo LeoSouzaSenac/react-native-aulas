@@ -382,16 +382,56 @@ export default function Aula2({ goTo }: PageProps) {
               automático pra manter o conteúdo dentro da área "segura" e
               visível da tela.
             </p>
+            <Callout type="atencao">
+              O <code>SafeAreaView</code> que vinha embutido no pacote{" "}
+              <code>react-native</code> foi <strong>descontinuado</strong>{" "}
+              (a partir da SDK 54 / React Native 0.81 ele aparece riscado
+              na documentação oficial). O substituto oficial é o pacote{" "}
+              <code>react-native-safe-area-context</code> — é ele que
+              vamos usar daqui pra frente.
+            </Callout>
+            <p>Primeiro, instale o pacote (uma vez só, por projeto):</p>
+            <AnnotatedCode
+              filename="terminal"
+              lines={[
+                [
+                  "npx expo install ",
+                  t("react-native-safe-area-context", "Biblioteca oficial recomendada pelo React Native pra lidar com áreas seguras — funciona em iOS, Android e até web."),
+                ],
+              ]}
+            />
+            <p>
+              Esse pacote expõe dois personagens que trabalham juntos: o{" "}
+              <code>SafeAreaProvider</code>, que <strong>mede</strong> as
+              áreas seguras do aparelho, e o <code>SafeAreaView</code>, que{" "}
+              <strong>aplica</strong> esse espaçamento como padding. O
+              Provider precisa envolver o app inteiro <strong>uma vez só</strong>,
+              normalmente no <code>App.tsx</code>; o SafeAreaView você usa
+              quantas vezes quiser, em qualquer tela, sempre dentro dele.
+            </p>
             <AnnotatedCode
               filename="App.tsx"
               lines={[
-                ["import { ", t("SafeAreaView", "Container que adiciona espaçamento automático pra fugir do notch e da barra de gestos."), ", ", t("Text", "Conteúdo protegido."), ", ", t("StyleSheet", "Cria estilos validados."), " } from 'react-native'"],
+                [
+                  "import { ",
+                  t("SafeAreaProvider", "Mede as áreas seguras do aparelho (notch, barra de status, barra de gestos) e disponibiliza essa informação pro app inteiro."),
+                  ", ",
+                  t("SafeAreaView", "Container que lê a medida do Provider e aplica como padding — o mesmo papel do antigo SafeAreaView, só que atualizado."),
+                  " } from 'react-native-safe-area-context'",
+                ],
+                ["import { ", t("Text", "Conteúdo protegido."), ", ", t("StyleSheet", "Cria estilos validados."), " } from 'react-native'"],
                 [""],
                 ["const App = () => {"],
                 ["  return ("],
-                ["    <SafeAreaView style={styles.container}>"],
-                ["      <Text>Conteúdo protegido do notch</Text>"],
-                ["    </SafeAreaView>"],
+                [
+                  "    <",
+                  t("SafeAreaProvider", "Precisa ficar por fora de tudo — só uma vez, no componente raiz do app."),
+                  ">",
+                ],
+                ["      <SafeAreaView style={styles.container}>"],
+                ["        <Text>Conteúdo protegido do notch</Text>"],
+                ["      </SafeAreaView>"],
+                ["    </SafeAreaProvider>"],
                 ["  )"],
                 ["}"],
                 [""],
@@ -405,12 +445,19 @@ export default function Aula2({ goTo }: PageProps) {
             <PropsTable
               rows={[
                 { name: "style", type: "objeto", desc: "Estilo do container, igual a um View comum" },
+                {
+                  name: "edges",
+                  type: "array",
+                  desc: "De quais lados aplicar o espaçamento — por padrão aplica nos 4. Ex: ['top', 'bottom'] ignora os lados laterais",
+                },
               ]}
             />
             <Callout type="dica">
-              Use <code>SafeAreaView</code> envolvendo a tela inteira,
-              geralmente no <code>App.tsx</code> ou logo no componente raiz
-              de cada tela do app.
+              Só existe <strong>um</strong> <code>SafeAreaProvider</code> por
+              app — coloque no <code>App.tsx</code>, por fora de tudo (por
+              fora até de uma eventual navegação). Já{" "}
+              <code>SafeAreaView</code> pode aparecer várias vezes, em
+              telas diferentes, sempre dentro do Provider.
             </Callout>
           </div>
           <DeviceFrame caption="Conteúdo respeitando a área segura">

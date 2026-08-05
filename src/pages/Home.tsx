@@ -68,6 +68,7 @@ export default function Home({ goTo }: PageProps) {
                 <span className="aula-chip active">Aula 1 · Intro + setup + rodar o app</span>
                 <span className="aula-chip active">Aula 2 · Componentes básicos</span>
                 <span className="aula-chip active">Aula 3 · Estilização e Flexbox</span>
+                <span className="aula-chip active">Aula 4 · Props e desestruturação</span>
               </div>
             </div>
           </button>

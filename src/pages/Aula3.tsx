@@ -325,7 +325,10 @@ export default function Aula3({ goTo }: PageProps) {
           <span className="nb-label">← Anterior</span>
           Aula 2 · Componentes básicos
         </button>
-        <div />
+        <button className="nav-btn right" onClick={() => goTo("aula4")}>
+          <span className="nb-label">Próxima →</span>
+          Aula 4 · Props
+        </button>
       </div>
     </div>
   );

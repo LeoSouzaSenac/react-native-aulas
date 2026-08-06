@@ -2,6 +2,7 @@ import AnnotatedCode from "../components/AnnotatedCode";
 import Callout from "../components/Callout";
 import PropsTable from "../components/PropsTable";
 import DeviceFrame from "../components/DeviceFrame";
+import DocsBox from "../components/DocsBox";
 import Term from "../components/Term";
 import { t } from "../utils/ann";
 
@@ -426,6 +427,16 @@ export default function Aula5({ goTo }: PageProps) {
           FlatList).
         </Callout>
       </div>
+
+      <DocsBox
+        links={[
+          { label: "useState", desc: "react.dev — referência oficial completa do hook", url: "https://react.dev/reference/react/useState" },
+          { label: "Hooks (visão geral)", desc: "react.dev — todos os hooks embutidos do React", url: "https://react.dev/reference/react/hooks" },
+          { label: "TextInput", desc: "reactnative.dev — todas as props de campos de texto", url: "https://reactnative.dev/docs/textinput" },
+          { label: "FlatList", desc: "reactnative.dev — referência completa, incluindo performance", url: "https://reactnative.dev/docs/flatlist" },
+          { label: "Rendering Lists", desc: "react.dev — o porquê da keyExtractor/key explicado a fundo", url: "https://react.dev/learn/rendering-lists" },
+        ]}
+      />
 
       <div className="aula-footer-nav">
         <button className="nav-btn" onClick={() => goTo("aula4")}>

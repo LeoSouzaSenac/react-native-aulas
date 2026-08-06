@@ -2,6 +2,7 @@ import AnnotatedCode from "../components/AnnotatedCode";
 import Callout from "../components/Callout";
 import PropsTable from "../components/PropsTable";
 import DeviceFrame from "../components/DeviceFrame";
+import DocsBox from "../components/DocsBox";
 import Term from "../components/Term";
 import { t } from "../utils/ann";
 
@@ -631,6 +632,18 @@ export default function Aula2({ goTo }: PageProps) {
           Teste no seu celular pelo Expo Go antes de mostrar pro professor.
         </Callout>
       </div>
+
+      <DocsBox
+        links={[
+          { label: "View", desc: "reactnative.dev — todas as props do container universal", url: "https://reactnative.dev/docs/view" },
+          { label: "Text", desc: "reactnative.dev — props de texto, seleção e truncamento", url: "https://reactnative.dev/docs/text" },
+          { label: "Image", desc: "reactnative.dev — source, resizeMode e carregamento", url: "https://reactnative.dev/docs/image" },
+          { label: "ScrollView", desc: "reactnative.dev — todas as props de rolagem", url: "https://reactnative.dev/docs/scrollview" },
+          { label: "SafeAreaView", desc: "docs.expo.dev — SafeAreaProvider, SafeAreaView e insets", url: "https://docs.expo.dev/develop/user-interface/safe-areas/" },
+          { label: "Button", desc: "reactnative.dev — o componente de botão nativo", url: "https://reactnative.dev/docs/button" },
+          { label: "TouchableOpacity", desc: "reactnative.dev — feedback de toque customizável", url: "https://reactnative.dev/docs/touchableopacity" },
+        ]}
+      />
 
       <div className="aula-footer-nav">
         <button className="nav-btn" onClick={() => goTo("aula1")}>

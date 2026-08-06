@@ -2,6 +2,7 @@ import AnnotatedCode from "../components/AnnotatedCode";
 import Callout from "../components/Callout";
 import PropsTable from "../components/PropsTable";
 import DeviceFrame from "../components/DeviceFrame";
+import DocsBox from "../components/DocsBox";
 import Term from "../components/Term";
 import { t } from "../utils/ann";
 
@@ -319,6 +320,15 @@ export default function Aula3({ goTo }: PageProps) {
           <code>justifyContent: "space-between"</code>.
         </Callout>
       </div>
+
+      <DocsBox
+        links={[
+          { label: "StyleSheet", desc: "reactnative.dev — create, flatten e boas práticas de estilo", url: "https://reactnative.dev/docs/stylesheet" },
+          { label: "Layout com Flexbox", desc: "reactnative.dev — guia completo de flexDirection, justifyContent etc", url: "https://reactnative.dev/docs/flexbox" },
+          { label: "Height and Width", desc: "reactnative.dev — dimensões fixas, flexíveis e porcentagem", url: "https://reactnative.dev/docs/height-and-width" },
+          { label: "Platform Specific Code", desc: "reactnative.dev — Platform.OS e Platform.select em detalhe", url: "https://reactnative.dev/docs/platform-specific-code" },
+        ]}
+      />
 
       <div className="aula-footer-nav">
         <button className="nav-btn" onClick={() => goTo("aula2")}>

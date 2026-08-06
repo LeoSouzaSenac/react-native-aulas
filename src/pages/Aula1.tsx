@@ -3,6 +3,7 @@ import AnnotatedCode from "../components/AnnotatedCode";
 import TerminalBlock from "../components/TerminalBlock";
 import Callout from "../components/Callout";
 import DeviceFrame from "../components/DeviceFrame";
+import DocsBox from "../components/DocsBox";
 import Term from "../components/Term";
 import { t } from "../utils/ann";
 
@@ -354,6 +355,15 @@ export default function Aula1({ goTo }: PageProps) {
           </DeviceFrame>
         </div>
       </div>
+
+      <DocsBox
+        links={[
+          { label: "Create a project", desc: "docs.expo.dev — criando um projeto Expo, templates e SDK", url: "https://docs.expo.dev/get-started/create-a-project/" },
+          { label: "TypeScript", desc: "docs.expo.dev — guia oficial de TypeScript no Expo", url: "https://docs.expo.dev/guides/typescript/" },
+          { label: "Set up your environment", desc: "docs.expo.dev — Expo Go, ambiente e primeiros passos", url: "https://docs.expo.dev/get-started/set-up-your-environment/" },
+          { label: "Expo CLI — tunneling", desc: "docs.expo.dev — como o modo --tunnel funciona por baixo dos panos", url: "https://docs.expo.dev/more/expo-cli/" },
+        ]}
+      />
 
       <div className="aula-footer-nav">
         <div />

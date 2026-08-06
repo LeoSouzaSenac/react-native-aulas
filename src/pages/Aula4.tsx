@@ -2,6 +2,7 @@ import AnnotatedCode from "../components/AnnotatedCode";
 import Callout from "../components/Callout";
 import PropsTable from "../components/PropsTable";
 import DeviceFrame from "../components/DeviceFrame";
+import DocsBox from "../components/DocsBox";
 import Term from "../components/Term";
 import { t } from "../utils/ann";
 
@@ -371,6 +372,14 @@ export default function Aula4({ goTo }: PageProps) {
           um com nome, bio e foto próprios.
         </Callout>
       </div>
+
+      <DocsBox
+        links={[
+          { label: "Passing Props to a Component", desc: "react.dev — o guia oficial de props em React", url: "https://react.dev/learn/passing-props-to-a-component" },
+          { label: "TypeScript com React", desc: "react.dev — tipando props, interfaces e componentes", url: "https://react.dev/learn/typescript" },
+          { label: "TypeScript no Expo", desc: "docs.expo.dev — configuração de TS específica do Expo", url: "https://docs.expo.dev/guides/typescript/" },
+        ]}
+      />
 
       <div className="aula-footer-nav">
         <button className="nav-btn" onClick={() => goTo("aula3")}>

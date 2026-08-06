@@ -377,9 +377,9 @@ export default function Aula4({ goTo }: PageProps) {
           <span className="nb-label">← Anterior</span>
           Aula 3 · Estilização e Flexbox
         </button>
-        <button className="nav-btn right" onClick={() => goTo("home")}>
-          <span className="nb-label">Fim do Bloco 1</span>
-          Voltar ao início
+        <button className="nav-btn right" onClick={() => goTo("aula5")}>
+          <span className="nb-label">Próxima →</span>
+          Aula 5 · Estado com useState
         </button>
       </div>
     </div>

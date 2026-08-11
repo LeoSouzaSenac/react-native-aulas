@@ -61,7 +61,7 @@ export default function Home({ goTo }: PageProps) {
               <p>
                 O que é React Native, ambiente com Expo em TypeScript, todos
                 os componentes básicos (incluindo botões e TouchableOpacity)
-                com <code>rnfce</code>, estilização com Flexbox, e como
+                com <code>rnfes</code>, estilização com Flexbox, e como
                 rodar o app no celular e no navegador.
               </p>
               <div className="aula-chip-row">
@@ -70,6 +70,7 @@ export default function Home({ goTo }: PageProps) {
                 <span className="aula-chip active">Aula 3 · Estilização e Flexbox</span>
                 <span className="aula-chip active">Aula 4 · Props e desestruturação</span>
                 <span className="aula-chip active">Aula 5 · Estado com useState e FlatList</span>
+                <span className="aula-chip active">Aula 6 · useEffect</span>
               </div>
             </div>
           </button>

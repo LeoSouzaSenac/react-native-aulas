@@ -21,12 +21,12 @@ export default function Aula2({ goTo }: PageProps) {
         conjunto equivalente — só que nativo. Hoje vamos conhecer todos os
         essenciais, criando cada um dentro da pasta <code>components</code>{" "}
         que já preparamos na Aula 1, usando um atalho que acelera muito o
-        dia a dia: o snippet <code>rnfce</code>.
+        dia a dia: o snippet <code>rnfes</code>.
       </p>
 
       <div className="section">
         <h3>
-          <span className="num">0</span>O atalho <code>rnfce</code>
+          <span className="num">0</span>O atalho <code>rnfes</code>
         </h3>
         <p>
           No VS Code, instale a extensão{" "}
@@ -34,7 +34,7 @@ export default function Aula2({ goTo }: PageProps) {
           crie um arquivo dentro de <code>components/</code> (ex:{" "}
           <code>components/Cartao.tsx</code> — repare na extensão{" "}
           <code>.tsx</code>, não <code>.jsx</code>), digite{" "}
-          <code>rnfce</code> e aperte <code>Tab</code>: o editor gera
+          <code>rnfes</code> e aperte <code>Tab</code>: o editor gera
           sozinho o esqueleto de um componente funcional de React Native,
           já com export incluído. Toque nos termos destacados no código
           abaixo pra entender cada linha:
@@ -81,7 +81,7 @@ export default function Aula2({ goTo }: PageProps) {
         <Callout type="dica">
           Existem variações do snippet: <code>rnfc</code> (sem export, com
           export separado no final), <code>rnfs</code> (class component,
-          raramente usado hoje). Fixem o <code>rnfce</code> — é o que vamos
+          raramente usado hoje). Fixem o <code>rnfes</code> — é o que vamos
           usar o curso inteiro.
         </Callout>
       </div>
@@ -624,7 +624,7 @@ export default function Aula2({ goTo }: PageProps) {
         </h3>
         <Callout type="pratica">
           Crie um componente <code>components/CartaoPerfil.tsx</code> usando{" "}
-          <code>rnfce</code>. Dentro dele, monte: uma{" "}
+          <code>rnfes</code>. Dentro dele, monte: uma{" "}
           <code>SafeAreaView</code> envolvendo tudo, uma <code>Image</code>{" "}
           circular (use uma URL de foto qualquer), um <code>Text</code> com
           o nome, outro <code>Text</code> menor com uma bio curta, e um{" "}

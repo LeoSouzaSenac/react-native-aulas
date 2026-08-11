@@ -419,7 +419,7 @@ export default function Aula5({ goTo }: PageProps) {
         </h3>
         <Callout type="pratica">
           Crie um componente <code>components/Busca.tsx</code> com{" "}
-          <code>rnfce</code>: um <code>TextInput</code> controlado por
+          <code>rnfes</code>: um <code>TextInput</code> controlado por
           estado (<code>termo</code>), e logo abaixo um <code>FlatList</code>{" "}
           exibindo apenas os produtos cujo <code>titulo</code> contenha o
           texto digitado (dica: filtre o array com{" "}
@@ -443,9 +443,9 @@ export default function Aula5({ goTo }: PageProps) {
           <span className="nb-label">← Anterior</span>
           Aula 4 · Props
         </button>
-        <button className="nav-btn right" onClick={() => goTo("home")}>
-          <span className="nb-label">Fim do Bloco 1</span>
-          Voltar ao início
+        <button className="nav-btn right" onClick={() => goTo("aula6")}>
+          <span className="nb-label">Próxima →</span>
+          Aula 6 · useEffect
         </button>
       </div>
     </div>

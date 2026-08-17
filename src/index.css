@@ -157,7 +157,6 @@ button {
   white-space: nowrap;
 }
 
-/* home-screen style nav, echoing an app grid */
 .appnav {
   display: flex;
   gap: 8px;
@@ -396,7 +395,7 @@ button {
   color: #d9d3ec;
 }
 
-/* ---------- Terminal block (for CLI commands) ---------- */
+/* ---------- Terminal block ---------- */
 
 .termblock {
   background: #0c0912;
@@ -466,7 +465,7 @@ button {
   border-bottom: none;
 }
 
-/* ---------- Device frame (signature element) ---------- */
+/* ---------- Device frame ---------- */
 
 .device-frame {
   width: 220px;
@@ -593,7 +592,7 @@ button {
   border-color: var(--accent-dim);
 }
 
-/* ---------- Footer nav (prev/next aula) ---------- */
+/* ---------- Footer nav ---------- */
 
 .aula-footer-nav {
   display: flex;
@@ -673,6 +672,115 @@ button {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 26px;
+}
+
+/* ---------- Term tooltip (balãozinho interativo) ---------- */
+
+.term {
+  position: relative;
+  display: inline;
+}
+
+.term-trigger {
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.term-text .term-trigger {
+  color: var(--text);
+  border-bottom: 1.5px dashed var(--accent-4);
+  padding-bottom: 1px;
+}
+
+.term-text.open .term-trigger,
+.term-text .term-trigger:hover {
+  color: var(--accent-4);
+}
+
+.term-code .term-trigger {
+  border-bottom: 1.5px dotted rgba(74, 222, 158, 0.55);
+}
+
+.term-code.open .term-trigger,
+.term-code .term-trigger:hover {
+  background: rgba(74, 222, 158, 0.14);
+  border-radius: 4px;
+}
+
+.term-trigger:focus-visible {
+  box-shadow: 0 0 0 2px var(--accent-4);
+  border-radius: 3px;
+}
+
+.term-tooltip-portal {
+  position: fixed;
+  z-index: 2000;
+  display: block;
+  width: max-content;
+  max-width: 280px;
+  background: var(--bg-raised);
+  border: 1px solid var(--accent-dim);
+  border-radius: 10px;
+  padding: 11px 13px;
+  box-shadow: 0 14px 34px -12px rgba(0, 0, 0, 0.6);
+  font-family: var(--font-body);
+  white-space: normal;
+  pointer-events: auto;
+}
+
+.term-tooltip-portal::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 14px;
+  width: 11px;
+  height: 11px;
+  background: var(--bg-raised);
+  border-left: 1px solid var(--accent-dim);
+  border-top: 1px solid var(--accent-dim);
+  transform: rotate(45deg);
+}
+
+.term-tooltip-note {
+  display: block;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.term-tooltip-options {
+  display: block;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-soft);
+}
+
+.term-opt {
+  display: block;
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: var(--text-dim);
+  margin-bottom: 3px;
+}
+
+.term-opt code {
+  font-size: 11px;
+  margin-right: 5px;
+  padding: 1px 5px;
+  color: var(--accent-2);
+}
+
+.codeblock .cb-head .hint {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dimmer);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.codeblock pre .code-line {
+  display: block;
 }
 
 /* ---------- DocsBox (documentação oficial) ---------- */
@@ -793,111 +901,4 @@ button {
 
 .docsbox-link:hover .docsbox-link-arrow {
   color: var(--accent);
-}
-
-.term {
-  position: relative;
-  display: inline;
-}
-
-.term-trigger {
-  cursor: pointer;
-  border-radius: 3px;
-  outline: none;
-}
-
-.term-text .term-trigger {
-  color: var(--text);
-  border-bottom: 1.5px dashed var(--accent-4);
-  padding-bottom: 1px;
-}
-
-.term-text.open .term-trigger,
-.term-text .term-trigger:hover {
-  color: var(--accent-4);
-}
-
-.term-code .term-trigger {
-  border-bottom: 1.5px dotted rgba(74, 222, 158, 0.55);
-}
-
-.term-code.open .term-trigger,
-.term-code .term-trigger:hover {
-  background: rgba(74, 222, 158, 0.14);
-  border-radius: 4px;
-}
-
-.term-trigger:focus-visible {
-  box-shadow: 0 0 0 2px var(--accent-4);
-  border-radius: 3px;
-}
-
-.term-tooltip-portal {
-  position: fixed;
-  z-index: 2000;
-  display: block;
-  width: max-content;
-  max-width: 280px;
-  background: var(--bg-raised);
-  border: 1px solid var(--accent-dim);
-  border-radius: 10px;
-  padding: 11px 13px;
-  box-shadow: 0 14px 34px -12px rgba(0, 0, 0, 0.6);
-  font-family: var(--font-body);
-  white-space: normal;
-  pointer-events: auto;
-}
-
-.term-tooltip-portal::before {
-  content: "";
-  position: absolute;
-  top: -6px;
-  left: 14px;
-  width: 11px;
-  height: 11px;
-  background: var(--bg-raised);
-  border-left: 1px solid var(--accent-dim);
-  border-top: 1px solid var(--accent-dim);
-  transform: rotate(45deg);
-}
-
-.term-tooltip-note {
-  display: block;
-  font-size: 12.5px;
-  line-height: 1.5;
-  color: var(--text);
-}
-
-.term-tooltip-options {
-  display: block;
-  margin-top: 8px;
-  padding-top: 8px;
-  border-top: 1px solid var(--border-soft);
-}
-
-.term-opt {
-  display: block;
-  font-size: 11.5px;
-  line-height: 1.6;
-  color: var(--text-dim);
-  margin-bottom: 3px;
-}
-
-.term-opt code {
-  font-size: 11px;
-  margin-right: 5px;
-  padding: 1px 5px;
-  color: var(--accent-2);
-}
-
-.codeblock .cb-head .hint {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  color: var(--text-dimmer);
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-}
-
-.codeblock pre .code-line {
-  display: block;
 }

@@ -57,12 +57,12 @@ export default function Home({ goTo }: PageProps) {
           >
             <span className="bnum">01</span>
             <div>
-              <h4>Bloco 1 — Primeiros passos e superfície da tela</h4>
+              <h4>Bloco 1 — Fundamentos de React Native</h4>
               <p>
                 O que é React Native, ambiente com Expo em TypeScript, todos
-                os componentes básicos (incluindo botões e TouchableOpacity)
-                com <code>rnfes</code>, estilização com Flexbox, e como
-                rodar o app no celular e no navegador.
+                os componentes básicos, estilização com Flexbox, props,
+                estado, efeitos e consumo de API — do zero até um app de
+                verdade.
               </p>
               <div className="aula-chip-row">
                 <span className="aula-chip active">Aula 1 · Intro + setup + rodar o app</span>
@@ -71,6 +71,7 @@ export default function Home({ goTo }: PageProps) {
                 <span className="aula-chip active">Aula 4 · Props e desestruturação</span>
                 <span className="aula-chip active">Aula 5 · Estado com useState e FlatList</span>
                 <span className="aula-chip active">Aula 6 · useEffect</span>
+                <span className="aula-chip active">Aula 7 · POST, PUT e DELETE</span>
               </div>
             </div>
           </button>
@@ -86,8 +87,8 @@ export default function Home({ goTo }: PageProps) {
           <div className="block-card" style={{ opacity: 0.4 }}>
             <span className="bnum">03</span>
             <div>
-              <h4>Bloco 3 — Estado, dados e recursos nativos</h4>
-              <p>Consumo de API, AsyncStorage, câmera e permissões. (em breve)</p>
+              <h4>Bloco 3 — Recursos nativos</h4>
+              <p>AsyncStorage, câmera, permissões e mais. (em breve)</p>
             </div>
           </div>
         </div>

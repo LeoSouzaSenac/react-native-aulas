@@ -123,13 +123,8 @@ export default function Aula5({ goTo }: PageProps) {
                 [""],
                 ["  return ("],
                 ["    <View style={styles.linha}>"],
-                [
-                  "      <TouchableOpacity",
-                  "",
-                ],
-                [
-                  "        style={styles.botao}",
-                ],
+                ["      <TouchableOpacity"],
+                ["        style={styles.botao}"],
                 [
                   "        ",
                   t("onPress={() => setContador(contador - 1)}", "Toda vez que tocar, calcula o novo valor a partir do valor atual e manda pro setContador."),

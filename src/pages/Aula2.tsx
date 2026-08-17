@@ -315,7 +315,7 @@ export default function Aula2({ goTo }: PageProps) {
             <AnnotatedCode
               filename="components/Feed.tsx"
               lines={[
-                ["import { ", t("ScrollView", "Container rolável — envolve conteúdo que pode passar da altura da tela."), ", ", t("Text", "Cada item da lista."), ", ", t("StyleSheet", "Cria estilos validados."), " } from 'react-native'"],
+                ["import { ", t("ScrollView", "Container rolável — envolve conteúdo que pode passar da altura da tela."), ", ", t("Text", "Cada item da lista."), ", ", t("StyleSheet", "Cria estilos."), " } from 'react-native'"],
                 [""],
                 ["const Feed = () => {"],
                 ["  return ("],

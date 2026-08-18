@@ -347,9 +347,9 @@ export default function Aula7({ goTo }: PageProps) {
           <span className="nb-label">← Anterior</span>
           Aula 6 · useEffect
         </button>
-        <button className="nav-btn right" onClick={() => goTo("home")}>
-          <span className="nb-label">Fim do Bloco 1</span>
-          Voltar ao início
+        <button className="nav-btn right" onClick={() => goTo("aula8")}>
+          <span className="nb-label">Próxima →</span>
+          Aula 8 · Navegação
         </button>
       </div>
     </div>

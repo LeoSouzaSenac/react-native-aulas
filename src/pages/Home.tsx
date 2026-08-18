@@ -76,13 +76,24 @@ export default function Home({ goTo }: PageProps) {
             </div>
           </button>
 
-          <div className="block-card" style={{ opacity: 0.55 }}>
+          <button
+            className="block-card done"
+            onClick={() => goTo("aula8")}
+            style={{ textAlign: "left", border: "1px solid var(--border-soft)" }}
+          >
             <span className="bnum">02</span>
             <div>
               <h4>Bloco 2 — Navegação entre telas</h4>
-              <p>React Navigation: Stack, Tabs e Drawer. (em breve)</p>
+              <p>
+                React Navigation: Stack Navigator com parâmetros tipados,
+                Bottom Tabs com ícones, e uma visão geral de Drawer e Top
+                Tabs.
+              </p>
+              <div className="aula-chip-row">
+                <span className="aula-chip active">Aula 8 · Stack e Bottom Tabs</span>
+              </div>
             </div>
-          </div>
+          </button>
 
           <div className="block-card" style={{ opacity: 0.4 }}>
             <span className="bnum">03</span>

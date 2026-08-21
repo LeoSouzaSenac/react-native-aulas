@@ -1,5 +1,3 @@
-import Term from "../components/Term";
-
 interface PageProps {
   goTo: (id: string) => void;
 }
@@ -13,18 +11,10 @@ export default function Home({ goTo }: PageProps) {
       </h2>
       <p className="lede">
         Site vivo da UC — vai crescendo aula a aula. Aqui você aprende a
-        construir telas de verdade em{" "}
-        <Term note="Framework do time do Meta que usa React para gerar telas com componentes nativos de iOS e Android, em vez de HTML.">
-          React Native
-        </Term>
-        : os componentes que existem no lugar da div, como estilizar do
-        jeito que o celular entende, e como rodar tudo isso no seu próprio
-        aparelho enquanto você digita o código. Sempre que encontrar um
-        termo com{" "}
-        <Term note="Assim! Toda palavra sublinhada e pontilhada é clicável — toca ou passa o mouse pra ver a explicação.">
-          sublinhado pontilhado
-        </Term>
-        , é só tocar pra ver a explicação.
+        construir telas de verdade em React Native: os componentes que
+        existem no lugar da div, como estilizar do jeito que o celular
+        entende, e como rodar tudo isso no seu próprio aparelho enquanto
+        você digita o código.
       </p>
 
       <div className="hero-devices">
@@ -83,14 +73,14 @@ export default function Home({ goTo }: PageProps) {
           >
             <span className="bnum">02</span>
             <div>
-              <h4>Bloco 2 — Navegação entre telas</h4>
+              <h4>Bloco 2 — Navegação e recursos nativos</h4>
               <p>
                 React Navigation: Stack Navigator com parâmetros tipados,
-                Bottom Tabs com ícones, e uma visão geral de Drawer e Top
-                Tabs.
+                Bottom Tabs com ícones, câmera e galeria.
               </p>
               <div className="aula-chip-row">
                 <span className="aula-chip active">Aula 8 · Stack e Bottom Tabs</span>
+                <span className="aula-chip active">Aula 9 · Câmera e galeria</span>
               </div>
             </div>
           </button>
@@ -98,8 +88,8 @@ export default function Home({ goTo }: PageProps) {
           <div className="block-card" style={{ opacity: 0.4 }}>
             <span className="bnum">03</span>
             <div>
-              <h4>Bloco 3 — Recursos nativos</h4>
-              <p>AsyncStorage, câmera, permissões e mais. (em breve)</p>
+              <h4>Bloco 3 — Persistência e publicação</h4>
+              <p>AsyncStorage, autenticação, deploy nas lojas. (em breve)</p>
             </div>
           </div>
         </div>
@@ -112,9 +102,9 @@ export default function Home({ goTo }: PageProps) {
         <div className="two-col">
           <p style={{ color: "var(--text-dim)", fontSize: 14.5 }}>
             Este portal acompanha as aulas presenciais — ele não substitui
-            a prática no seu editor. Recomendado ter o VS Code aberto do
-            lado, com um projeto Expo já rodando, pra ir testando cada
-            trecho de código enquanto lê.
+            a prática no seu próprio editor. Recomendado ter o VS Code
+            aberto do lado, com um projeto Expo já rodando, pra ir testando
+            cada trecho de código enquanto lê.
           </p>
           <div className="panel">
             <p style={{ margin: 0, fontSize: 13.5, color: "var(--text-dimmer)" }}>
@@ -122,7 +112,8 @@ export default function Home({ goTo }: PageProps) {
               <strong style={{ color: "var(--text)" }}>Expo Go</strong>{" "}
               instalado no seu celular (Android ou iOS) — é tudo que você
               precisa pra acompanhar a partir da Aula 1. Atenção: o projeto
-              precisa ser criado no <strong style={{ color: "var(--text)" }}>SDK 54</strong>,
+              precisa ser criado no{" "}
+              <strong style={{ color: "var(--text)" }}>SDK 54</strong>,
               senão o Expo Go não abre o app (detalhes na Aula 1).
             </p>
           </div>

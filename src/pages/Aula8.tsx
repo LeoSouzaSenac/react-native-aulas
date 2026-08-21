@@ -135,6 +135,84 @@ export default function Aula8({ goTo }: PageProps) {
           fica por fora até do <code>NavigationContainer</code>, envolvendo
           tudo.
         </Callout>
+
+        <p>
+          Só isso ainda não navega — só empilha as duas telas registradas.
+          A navegação de verdade acontece dentro de cada tela, chamando{" "}
+          <code>navigation.navigate('NomeDaTela')</code>. Pra fechar o
+          exemplo, eis o <code>HomeScreen</code> com um botão que leva pra{" "}
+          <code>Profile</code>:
+        </p>
+        <AnnotatedCode
+          filename="screens/HomeScreen.tsx"
+          lines={[
+            ["import { View, Text, Button, StyleSheet } from 'react-native'"],
+            [""],
+            ["export default function HomeScreen({ ", t("navigation", "Prop especial — todo componente registrado como Stack.Screen recebe ele automaticamente, sem você passar nada."), " }: any) {"],
+            ["  return ("],
+            ["    <View style={styles.container}>"],
+            ["      <Text>HomeScreen</Text>"],
+            ["      <Button"],
+            ["        title=\"Ir para Profile\""],
+            [
+              "        ",
+              t("onPress={() => navigation.navigate('Profile')}", "É essa chamada que de fato navega: empilha a tela 'Profile' por cima da atual."),
+            ],
+            ["      />"],
+            ["    </View>"],
+            ["  )"],
+            ["}"],
+            [""],
+            ["const styles = StyleSheet.create({"],
+            ["  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },"],
+            ["})"],
+          ]}
+        />
+        <Callout type="dica">
+          Usei <code>{"{ navigation }: any"}</code> aqui só pra ir direto
+          ao ponto. Daqui a pouco, na seção 4, a gente troca esse{" "}
+          <code>any</code> por uma tipagem de verdade — mas a chamada{" "}
+          <code>navigation.navigate(...)</code> que realmente navega é
+          exatamente essa mesma, com ou sem tipo.
+        </Callout>
+      </div>
+
+      <div className="section">
+        <h3>
+          <span className="num">3.1</span>Voltando pra tela anterior
+        </h3>
+        <p>
+          Do lado do <code>ProfileScreen</code>, o caminho de volta usa o
+          mesmo <code>navigation</code>, só que com <code>goBack()</code>{" "}
+          em vez de <code>navigate</code>:
+        </p>
+        <AnnotatedCode
+          filename="screens/ProfileScreen.tsx"
+          lines={[
+            ["import { View, Text, Button } from 'react-native'"],
+            [""],
+            ["export default function ProfileScreen({ navigation }: any) {"],
+            ["  return ("],
+            ["    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>"],
+            ["      <Text>ProfileScreen</Text>"],
+            ["      <Button"],
+            ["        title=\"Voltar\""],
+            [
+              "        ",
+              t("onPress={() => navigation.goBack()}", "Desempilha a tela atual, voltando pra que estava embaixo — nesse caso, a Home."),
+            ],
+            ["      />"],
+            ["    </View>"],
+            ["  )"],
+            ["}"],
+          ]}
+        />
+        <Callout type="dica">
+          Repare que <code>Profile</code> já ganha de graça um botão de
+          voltar no cabeçalho nativo, criado automaticamente pelo Stack
+          Navigator — o <code>Button</code> com <code>goBack()</code> aqui
+          é só pra deixar explícito como funciona por trás dos panos.
+        </Callout>
       </div>
 
       <div className="section">
@@ -454,9 +532,9 @@ export default function Aula8({ goTo }: PageProps) {
           <span className="nb-label">← Anterior</span>
           Aula 7 · POST, PUT e DELETE
         </button>
-        <button className="nav-btn right" onClick={() => goTo("home")}>
-          <span className="nb-label">Voltar</span>
-          Início
+        <button className="nav-btn right" onClick={() => goTo("aula9")}>
+          <span className="nb-label">Próxima →</span>
+          Aula 9 · Câmera e galeria
         </button>
       </div>
     </div>

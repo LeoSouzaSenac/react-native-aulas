@@ -9,6 +9,7 @@ import Aula6 from "./pages/Aula6";
 import Aula7 from "./pages/Aula7";
 import Aula8 from "./pages/Aula8";
 import Aula9 from "./pages/Aula9";
+import Aula10 from "./pages/Aula10";
 
 type PageId =
   | "home"
@@ -20,7 +21,8 @@ type PageId =
   | "aula6"
   | "aula7"
   | "aula8"
-  | "aula9";
+  | "aula9"
+  | "aula10";
 
 const NAV: { id: PageId; label: string; icon: string }[] = [
   { id: "home", label: "Início", icon: "•" },
@@ -33,6 +35,7 @@ const NAV: { id: PageId; label: string; icon: string }[] = [
   { id: "aula7", label: "Aula 7", icon: "07" },
   { id: "aula8", label: "Aula 8", icon: "08" },
   { id: "aula9", label: "Aula 9", icon: "09" },
+  { id: "aula10", label: "Aula 10", icon: "10" },
 ];
 
 function isPageId(v: string): v is PageId {
@@ -46,7 +49,8 @@ function isPageId(v: string): v is PageId {
     v === "aula6" ||
     v === "aula7" ||
     v === "aula8" ||
-    v === "aula9"
+    v === "aula9" ||
+    v === "aula10"
   );
 }
 
@@ -105,6 +109,7 @@ function App() {
         {page === "aula7" && <Aula7 goTo={goTo} />}
         {page === "aula8" && <Aula8 goTo={goTo} />}
         {page === "aula9" && <Aula9 goTo={goTo} />}
+        {page === "aula10" && <Aula10 goTo={goTo} />}
       </div>
     </>
   );

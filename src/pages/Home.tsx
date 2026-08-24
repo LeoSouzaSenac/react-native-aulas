@@ -81,6 +81,7 @@ export default function Home({ goTo }: PageProps) {
               <div className="aula-chip-row">
                 <span className="aula-chip active">Aula 8 · Stack e Bottom Tabs</span>
                 <span className="aula-chip active">Aula 9 · Câmera e galeria</span>
+                <span className="aula-chip active">Aula 10 · AsyncStorage</span>
               </div>
             </div>
           </button>
@@ -89,7 +90,7 @@ export default function Home({ goTo }: PageProps) {
             <span className="bnum">03</span>
             <div>
               <h4>Bloco 3 — Persistência e publicação</h4>
-              <p>AsyncStorage, autenticação, deploy nas lojas. (em breve)</p>
+              <p>Autenticação e deploy nas lojas. (em breve)</p>
             </div>
           </div>
         </div>

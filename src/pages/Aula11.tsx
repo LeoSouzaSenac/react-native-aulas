@@ -357,9 +357,9 @@ export default function Aula11({ goTo }: PageProps) {
           <span className="nb-label">← Anterior</span>
           Aula 10 · AsyncStorage
         </button>
-        <button className="nav-btn right" onClick={() => goTo("home")}>
-          <span className="nb-label">Voltar</span>
-          Início
+        <button className="nav-btn right" onClick={() => goTo("aula12")}>
+          <span className="nb-label">Próxima →</span>
+          Aula 12 · Áudio, animação e modal
         </button>
       </div>
     </div>

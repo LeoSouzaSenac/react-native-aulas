@@ -83,6 +83,7 @@ export default function Home({ goTo }: PageProps) {
                 <span className="aula-chip active">Aula 9 · Câmera e galeria</span>
                 <span className="aula-chip active">Aula 10 · AsyncStorage</span>
                 <span className="aula-chip active">Aula 11 · Geolocalização e mapa</span>
+                <span className="aula-chip active">Aula 12 · Áudio, animação e modal</span>
               </div>
             </div>
           </button>

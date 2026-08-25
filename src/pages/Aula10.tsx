@@ -367,9 +367,9 @@ export default function Aula10({ goTo }: PageProps) {
           <span className="nb-label">← Anterior</span>
           Aula 9 · Câmera e galeria
         </button>
-        <button className="nav-btn right" onClick={() => goTo("home")}>
-          <span className="nb-label">Voltar</span>
-          Início
+        <button className="nav-btn right" onClick={() => goTo("aula11")}>
+          <span className="nb-label">Próxima →</span>
+          Aula 11 · Geolocalização
         </button>
       </div>
     </div>

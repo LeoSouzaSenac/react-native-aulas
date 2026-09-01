@@ -418,9 +418,9 @@ export default function Aula12({ goTo }: PageProps) {
           <span className="nb-label">← Anterior</span>
           Aula 11 · Geolocalização
         </button>
-        <button className="nav-btn right" onClick={() => goTo("home")}>
-          <span className="nb-label">Voltar</span>
-          Início
+        <button className="nav-btn right" onClick={() => goTo("aula13")}>
+          <span className="nb-label">Próxima →</span>
+          Aula 13 · React Native Paper
         </button>
       </div>
     </div>

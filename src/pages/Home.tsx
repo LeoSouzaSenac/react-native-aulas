@@ -84,6 +84,7 @@ export default function Home({ goTo }: PageProps) {
                 <span className="aula-chip active">Aula 10 · AsyncStorage</span>
                 <span className="aula-chip active">Aula 11 · Geolocalização e mapa</span>
                 <span className="aula-chip active">Aula 12 · Áudio, animação e modal</span>
+                <span className="aula-chip active">Aula 13 · React Native Paper</span>
               </div>
             </div>
           </button>
